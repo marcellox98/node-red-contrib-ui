@@ -7,7 +7,9 @@
   ],
   "main": "none",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "author": "Andrei Tatar",
   "license": "MIT",
@@ -35,7 +37,8 @@
   },
   "dependencies": {
     "serve-static": "^1.10.0",
-    "socket.io": "^1.3.7"
+    "socket.io": "^3.0.0",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "angular": "^1.4.8",
@@ -68,5 +71,6 @@
     "sprintf-js": "^1.0.3",
     "streamqueue": "^1.1.1",
     "svg-morpheus": "git://github.com/alexk111/SVG-Morpheus.git#master"
-  }
+  },
+  "snyk": true
 }
